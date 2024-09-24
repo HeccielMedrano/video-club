@@ -12,7 +12,9 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+// PORT es una variable de entorno PORT. Si llega la variable PORT, se utiliza; de lo contrario se utiliza el 3000.
+// Esta variable de entorno se pasa, en este caso, en el Dockerfile.
+var port = normalizePort(process.env.PORT || '3000'); 
 app.set('port', port);
 
 /**
